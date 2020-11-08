@@ -1,0 +1,70 @@
+body,html{background: #777};
+.planes{background: #777;}
+.plan{
+  vertical-align:bottom;
+  display:inline-block;
+  text-align:center;
+  width:250px;
+  background: white;
+  border: 5px solid #e5ded6;
+  border-radius:10px;
+}
+.titulo{
+  margin-bottom: 0px;
+  font-size: 34px;
+  color: #36bce6;
+}
+.precio{
+  margin-top:5px;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fd935a;
+}
+.unidad{
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #aaa;
+}
+.caracteristicas{
+    
+  width: 210px;
+  margin: 20px auto 15px;
+  padding: 15px 0 0 15px;
+  border-top: 1px solid #e5ded6;
+  text-align: left;
+  margin-bottom:0px;
+}
+.importante{
+  line-height: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fd935a;
+}
+.boton-plan{
+  text-decoration:none;
+  background: #00AF64;
+  color:white;
+  text-weight:bold;
+  font-size:30px;
+  border: 3px solid #007241;
+  padding: 0 15px;
+  border-radius:5px;
+  line-height: 60px;  
+}
+.destacado{
+  border: 12px solid #FFAA00;
+  margin-bottom:40px;
+  background:
+}
+.destacado:after{
+  content:'Destacado';
+  background:#FFAA00;
+  color:white;
+  font-weight:bold;
+  display:block;
+  padding-top:10px;
+}

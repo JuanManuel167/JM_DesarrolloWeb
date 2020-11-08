@@ -1,1 +1,240 @@
-Aqui les brindamos informacion sobre nuestras cotizaciones
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Cotizaciones</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Galeria 1">
+    <meta name="description" content="En esta pestaña mostramos los lugares a los que puedes viajar">    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="CSS/estilos_cotizaciones.css"> 
+      <link rel="icon" href="ImagenesLocales/cotizsimbol.png">
+      <script type="text/javascript" src="JS/JSModal.js"> </script>
+
+  </head>  
+  <body>    
+    <header>
+     <center>
+        <h1 >
+            COTIZACIONES
+          </h1>
+         <p class="title">Descubre nuestros mejores precios en nuestros diferentes destinos</p>
+         </center>
+    </header>    
+  <center>
+  <form id="formCotiz">
+      <label> Precio del Boleto:<input class="form-control" type="text" placeholder="$3800.00" readonly>
+          </label>
+      <br>
+        <label for="start">Fecha de inicio:   </label>
+
+<input type="date" id="start" name="trip-start"
+       value="2020-11-10"
+       min="2020-01-01" max="2022-12-31">
+            
+            <br>
+<label for="start">   Fecha de retorno:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2020-11-11"
+       min="2020-01-01" max="2022-12-31">
+      
+      <div class="form-group col-md-4">
+      <label for="inputState">Elija su destino</label>
+      <select id="inputState" class="form-control">
+        <option selected>Seleccionar...</option>
+        <option> Canada</option>
+<option>Brasil</option>
+<option>Argentina</option>
+<option>Chile</option>
+<option>España</option>
+<option>Italia</option>
+<option>Portugal</option>
+<option>Rusia</option>
+<option>Alemania</option>
+<option>Dubai</option>
+<option>Japon</option>
+<option>China</option>
+
+
+
+      </select>
+    </div>
+    
+            
+  <div class="form-group col-md-4">
+      <label for="inputState">Desde donde viaja?</label>
+      <select id="inputState" class="form-control">
+        <option selected>Seleccionar...</option>
+        <option> Aguascalientes</option>
+<option>Baja California</option>
+<option>Baja California Sur</option>
+<option>Campeche</option>
+<option>Chiapas</option>
+<option>Chihuahua</option>
+<option>Coahuila de Zaragoza</option>
+<option>Colima</option>
+<option>Durango</option>
+<option>Estado de México</option>
+<option>Guanajuato</option>
+<option>Guerrero</option>
+<option>Hidalgo</option>
+<option>Jalisco</option>
+<option>Michoacán </option>
+<option>Morelos</option>
+<option>Nayarit</option>
+<option>Nuevo León</option>
+<option>Oaxaca</option>
+<option>Puebla</option>
+<option>Querétaro</option>
+<option>Quintana Roo</option>
+<option>San Luis Potosí</option>
+<option>Sinaloa</option>
+<option>Sonora</option>
+<option>Tabasco</option>
+<option>Tamaulipas</option>
+<option>Tlaxcala</option>
+<option>Veracruz</option>
+<option>Yucatán</option>
+<option>Zacatecas</option>
+
+
+      </select>
+    </div>
+    
+    
+  <div class="form-group">
+    <div class="form-check">
+      
+      <input class="form-check-input" type="checkbox" id="gridCheck">Vuelo y Hospedaje<label class="form-check-label" for="gridCheck">
+      </label>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+Cotizar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">AeroMexFlight dice:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body"><h4>Presupuesto Total</h4>
+        Destino: Selecionado<br>Fecha de inicio: 10/11/2020<br>Fecha de retorno: 11/11/2020<br>Total días: 1<br> Vuelo y Hospedaje: $3800.00
+         Precio: $1000.00
+          <br>Personas: 1<br>
+          Total: $4800.00
+          <br><br><br>
+          <h6>Disfrute su Viaje!</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+        <button type="button" class="btn btn-primary">Validar</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <br><br><br>
+      </form>
+      
+      </center>
+      <center>
+        
+        <div class="planes">
+  <h2>Elige tu mejor plan</h2>
+  <div class="plan">
+    <h3 class="titulo">Plan Economico</h3>
+    <p class="precio">$700.00 <span class="unidad">Regular</span></p>
+    <ul class="caracteristicas">
+      <li><span class="importante"></span> Comodidad</li>
+        <li><span class="importante"></span> Asientos ergonomicos</li>
+      <li><span class="importante">3</span> Servicios de comida y bebida en horarios fijos</li>
+        <li><span class="importante"></span> Dispone servicios de confort</li>
+      <li><span class="importante">1</span> Servicio de Audio y video</li>
+    </ul>
+    <a href="#" class="boton-plan">Cotizar</a>
+  </div>
+  
+  <div class="plan destacado">
+    <h3 class="titulo">Plan Ejecutivo</h3>
+    <p class="precio">$1250.00 <span class="unidad">Comun</span></p>
+    <ul class="caracteristicas">
+      <li><span class="importante"></span> Flexibilidad de fechas</li>
+      <li><span class="importante"></span> Comodidad</li>
+      <li><span class="importante"></span> Mejor espacio de trabajo</li>
+        <li><span class="importante">3</span> Servicios de comida en horarios fijos</li>
+      <li><span class="importante">1</span> Servicio de Audio y video</li>
+        <li><span class="importante"></span> Asientos reclinables a 180°</li>
+        <li><span class="importante"></span> Acceso a bares y cafeteria del aeropuerto</li>
+    </ul>
+    <a href="#" class="boton-plan">Cotizar</a>
+  </div>
+  
+  <div class="plan">
+    <h3 class="titulo">Primera clase</h3>
+    <p class="precio">$2855.00 <span class="unidad">Servicio VIP</span></p>
+    <ul class="caracteristicas">
+        <li><span class="importante"></span>
+        Exclusividad</li>
+        <li><span class="importante"></span>
+        Privacidad</li>
+      <li><span class="importante"></span> Flexibilidad de fechas</li>
+      <li><span class="importante"></span> Comodidad</li>
+        <li><span class="importante"></span> Asientos fabricados con tecnologia moderna</li>
+      <li><span class="importante"></span> Mejor espacio de trabajo</li>
+        <li><span class="importante">3</span> Servicios de comida a pedido</li>
+      <li><span class="importante">1</span> Servicio de Audio y video</li>
+        <li><span class="importante"></span> Asientos reclinables a 180°</li>
+        <li><span class="importante"></span> Acceso a bares, restaurantes y cafeteria del aeropuerto</li>
+    </ul>
+    <a href="#" class="boton-plan">Cotizar</a>
+  </div>
+  
+  
+  
+</div>
+    </center>  
+    <div class="wrapper">
+      
+      <div class="clip-text clip-text_one  clip-text--cover"> <a href="https://growproexperience.com/wp-content/uploads/2018/05/Parques-Nacionales-de-Canada%CC%81-1280x640.jpg" target="_blank">CANADA </a></div>
+        
+        <br>
+  <div class="clip-text clip-text_tree clip-text--cover">
+      <a href="https://images2-mega.cdn.mdstrm.com/meganoticias/2020/08/21/_311315_1_5f4031879fc9b.jpg?d=950x535" target="_blank">BRASIL </a></div>
+      <div class="clip-text clip-text_two  clip-text--cover"><a href="https://www.swedishnomad.com/wp-content/images/2020/03/Largest-cities-in-Argentina.jpg" target="_blank">ARGENTINA </a></div>
+      <div class="clip-text clip-text_fourteen clip-text--cover"><a href="https://content.skyscnr.com/m/25adda91669a1d75/original/GettyImages-466024975_doc.jpg?resize=1800px:1800px&quality=100" target="_blank">CHILE </a></div>
+      <div class="clip-text clip-text_es clip-text--cover">
+          <a href="https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-07/besalu-paisaje.jpg?itok=KsEzEzQE" target="_blank">ESPAÑA </a></div>
+      <div class="clip-text clip-text_eleven clip-text--cover">
+        <a href="https://sites.google.com/site/arodrisitalia/_/rsrc/1421966243342/home/Coliseo_003.jpg" target="_blank">ITALIA </a></div>
+    
+      <div class="clip-text clip-text_six clip-text--cover">
+         <a href="https://img2.rtve.es/imagenes/paisaje-portugal-algo-portugal-08-08-18/1533806629440.jpg" target="_blank">PORTUGAL </a></div>
+      <div class="clip-text clip-text_seven clip-text--cover">
+         <a href="https://viajes.nationalgeographic.com.es/medio/2019/04/10/istock-621235832_0f187438_1235x849.jpg" target="_blank">RUSIA </a></div>
+      <div class="clip-text clip-text_eight clip-text--cover">
+         <a href="https://4.bp.blogspot.com/-c7_4xb8LGc4/U5WI9ba1doI/AAAAAAAAXJI/44x5X_Nly5Q/s1600/Los+pueblos+alemanes+t%C3%ADpicos+de+La+Selva+Negra.jpg" target="_blank">ALEMANIA </a></div>
+      
+      <div class="clip-text clip-text_nine clip-text--cover">
+        <a href="https://i.pinimg.com/originals/f0/15/aa/f015aa4bf9e9fc97185f2a62fa7edbfa.jpg" target="_blank">DUBAI </a></div>
+      <div class="clip-text clip-text_ten clip-text--cover"><a href="https://tipsparatuviaje.com/wp-content/uploads/2018/08/monte-fuji.jpg" target="_blank">JAPON </a></div>
+      <div class="clip-text clip-text_thirteen clip-text--cover">
+        <a href="https://sites.google.com/site/lospaisajesmagicosdelmundo/_/rsrc/1472776390203/la-gran-muralla-china-china/gran-muralla-china-invierno-nevada.jpg" target="_blank">CHINA </a></div>
+        
+  </div> 
+    
+
+   <br>
+   <br> 
+   <br>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  </body>  
+</html>

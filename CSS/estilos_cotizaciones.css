@@ -1,0 +1,397 @@
+/* 
+  Based from this article from Divya Manian - 
+  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+*/
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+* {
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: inherit;
+}
+
+.modal-title{
+    font-family:monospace;
+    font-size: Auto;
+color: orangered;
+}
+.modal-body{
+    color: black;
+    padding: 2px;
+    font-size: 90%
+    
+}
+h4{
+    font-family:fantasy;
+    
+    font-size: auto;
+    
+}
+h6{
+    
+    font-size: 30px;
+    color: orange;
+}
+
+h1{
+    color: white;
+  font:  Varela Round, sans-serif;
+    font-size: auto;
+font-weight: bold;
+  height: auto;
+  left: 0;
+  letter-spacing: 10px;
+    margin-top: 75px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  
+  animation: move linear 2000ms infinite;  
+}
+
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  25% {    
+    text-shadow:      
+      -4px -4px 0 hsla(180, 100%, 50%, 1), 
+      -3px -3px 0 hsla(180, 100%, 50%, 1), 
+      -2px -2px 0 hsla(180, 100%, 50%, 1), 
+      -1px -1px 0 hsla(180, 100%, 50%, 1),
+      4px 4px 0 hsla(0, 100%, 50%, 1), 
+      3px 3px 0 hsla(0, 100%, 50%, 1), 
+      2px 2px 0 hsla(0, 100%, 50%, 1), 
+      1px 1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 hsla(0, 100%, 50%, 1), 
+      -3px 3px 0 hsla(0, 100%, 50%, 1), 
+      -2px 2px 0 hsla(0, 100%, 50%, 1), 
+      -1px 1px 0 hsla(0, 100%, 50%, 1),
+      4px -4px 0 hsla(180, 100%, 50%, 1), 
+      3px -3px 0 hsla(180, 100%, 50%, 1), 
+      2px -2px 0 hsla(180, 100%, 50%, 1), 
+      1px -1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 hsla(180, 100%, 50%, 1), 
+      3px 3px 0 hsla(180, 100%, 50%, 1), 
+      2px 2px 0 hsla(180, 100%, 50%, 1), 
+      1px 1px 0 hsla(180, 100%, 50%, 1),
+      -4px -4px 0 hsla(0, 100%, 50%, 1), 
+      -3px -3px 0 hsla(0, 100%, 50%, 1), 
+      -2px -2px 0 hsla(0, 100%, 50%, 1), 
+      -1px -1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }  
+}
+
+*,
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+}
+
+
+.clip-text_one {
+    background-image: url(https://growproexperience.com/wp-content/uploads/2018/05/Parques-Nacionales-de-Canada%CC%81-1280x640.jpg);
+}
+
+.clip-text_two {
+    background-image: url(https://www.swedishnomad.com/wp-content/images/2020/03/Largest-cities-in-Argentina.jpg);
+}
+
+.clip-text_tree {
+    background-image: url(https://images2-mega.cdn.mdstrm.com/meganoticias/2020/08/21/_311315_1_5f4031879fc9b.jpg?d=950x535);
+}
+.clip-text_es {
+    background-image: url(https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-07/besalu-paisaje.jpg?itok=KsEzEzQE);
+}
+
+
+.clip-text_four {
+    background-image: url(https://i2.wp.com/www.inglaterra.net/wp-content/uploads/paisajes-de-inglaterra-2.jpg?resize=500%2C350);
+}
+
+.clip-text_five {
+    background-image: url(https://landscapesofeurope.files.wordpress.com/2010/12/turismo-francia.jpg?w=900);
+}
+
+.clip-text_six {
+    background-image: url(https://img2.rtve.es/imagenes/paisaje-portugal-algo-portugal-08-08-18/1533806629440.jpg);
+}
+
+.clip-text_seven {
+    background-image: url(https://viajes.nationalgeographic.com.es/medio/2019/04/10/istock-621235832_0f187438_1235x849.jpg);
+}
+
+.clip-text_eight {
+    background-image: url(https://4.bp.blogspot.com/-c7_4xb8LGc4/U5WI9ba1doI/AAAAAAAAXJI/44x5X_Nly5Q/s1600/Los+pueblos+alemanes+t%C3%ADpicos+de+La+Selva+Negra.jpg);
+}
+
+.clip-text_nine {
+    background-image: url(https://i.pinimg.com/originals/f0/15/aa/f015aa4bf9e9fc97185f2a62fa7edbfa.jpg);
+}
+
+.clip-text_ten {
+    background-image: url(https://tipsparatuviaje.com/wp-content/uploads/2018/08/monte-fuji.jpg);
+}
+
+.clip-text_eleven {
+    background-image: url(https://sites.google.com/site/arodrisitalia/_/rsrc/1421966243342/home/Coliseo_003.jpg);
+    background-size: cover;
+}
+
+.clip-text_twelve {
+    background-image: url(https://www.dw.com/image/16306348_201.jpg);
+}
+
+.clip-text_thirteen {
+    background-image: url(https://sites.google.com/site/lospaisajesmagicosdelmundo/_/rsrc/1472776390203/la-gran-muralla-china-china/gran-muralla-china-invierno-nevada.jpg);
+}
+
+.clip-text_fourteen {
+    background-image: url(https://content.skyscnr.com/m/25adda91669a1d75/original/GettyImages-466024975_doc.jpg?resize=1800px:1800px&quality=100);
+}
+
+.clip-text_fifteen {
+    background-image: url(https://cdn.mapamundial.co/paisajes/estados-unidos/nueva-york-estados-unidos.jpg);
+}
+
+/*Aqui va lo de cotizaciones por planes*/
+
+
+.plan{
+  vertical-align:bottom;
+  display:inline-block;
+  text-align:center;
+  width:25%;
+  background: #002E98 ;
+  border: 5px solid #e5ded6;
+  border-radius:10px;
+}
+.titulo{
+  margin-bottom: 0px;
+  font-size: 34px;
+  color: greenyellow;
+}
+.precio{
+  margin-top:5px;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fd935a;
+}
+.unidad{
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: normal;
+  color: ghostwhite;
+}
+.caracteristicas{
+    
+  width: 210px;
+    font-size: 20px;
+  margin: 20px auto 15px;
+  padding: 15px 0 0 15px;
+  border-top: 1px solid #e5ded6;
+  text-align: left;
+  margin-bottom:0px;
+}
+.importante{
+  line-height: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fd935a;
+}
+.boton-plan{
+  text-decoration:none;
+  background: #00AF64;
+  color:white;
+  text-weight:bold;
+  font-size:30px;
+  border: 3px solid #007241;
+  padding: 0 15px;
+  border-radius:5px;
+  line-height: 60px;  
+}
+.destacado{
+  border: 20px solid #FFAA00;
+  margin-bottom:40px;
+  background:
+}
+.destacado:after{
+  content:'Destacado';
+  background:#FFAA00;
+  color:white;
+  font-weight:bold;
+  display:block;
+  padding-top:10px;
+}
+h2{color: white;
+  font:  Varela Round, sans-serif;
+    font-size: 120px;
+font-weight: bold;
+  height: auto;
+  left: 0;
+  letter-spacing: 0px;
+    margin-top: 75px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+  position: relative;
+  text-align: center;
+    
+}
+#formCotiz{
+    background: #FF370D;
+	border: 0 none;
+    font-size: 25px;
+	border-radius: 20px;
+	
+	box-sizing: border-box;
+	width: 40%;
+    height: 10%;
+	margin: 0 0 20%;
+	
+	
+	position: relative;
+}
