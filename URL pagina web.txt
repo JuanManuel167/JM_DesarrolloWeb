@@ -1,5 +1,1 @@
 https://juanmanuel167.github.io/JM_DesarrolloWeb/
-
-Galeria>
-En el apartado de Galeria Destinos: esta la Galeria 1
-En al apartado de Galeria Destinos- Multimedia: esta la Galeria 2
